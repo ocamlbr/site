@@ -16,7 +16,7 @@ module Home = struct
           <img src="/img/ocamlbr.png" alt="OCaml BR Logo" className="mb-6 max-w-xs" />
           <h1 className="text-4xl font-bold mb-4">(React.string "OCaml Brasil")</h1>
         <p className="text-xl mb-4">(React.string {js|Bem-vindo à Comunidade Brasileira de OCaml! Aqui, programadores apaixonados por OCaml se reúnem para compartilhar conhecimento, construir projetos inovadores e promover o uso dessa poderosa linguagem de programação no Brasil.|js})</p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded transition duration-300">(React.string "Aprenda OCaml")</button>
+          <a href="https://ocamlbr.github.io/ocamlnomicon/" className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded transition duration-300">(React.string "Aprenda OCaml")</a>
         </section>
 
         <section className="mb-12">

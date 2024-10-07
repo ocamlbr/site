@@ -3,13 +3,13 @@ name: Deploy OCaml BR to GitHub Pages
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+    
     steps:
     - uses: actions/checkout@v3
 
@@ -24,8 +24,7 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: |
-        npm run install-opam-npm
+      run: npm run install-opam-npm
 
     - name: Build project
       run: |
@@ -34,7 +33,6 @@ jobs:
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
