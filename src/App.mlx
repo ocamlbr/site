@@ -1,7 +1,9 @@
+open Home
+
 module App = struct
   let[@react.component] make () =
-    ["Hello " ^ World.name ^ "!"; "This is React!!"]
-    |> List.map (fun greeting -> <h1 key=greeting> (React.string greeting) </h1>)
+    ["Hello " ^ "MLX" ^ "!"; "This is React!!"]
+    |> List.map (fun greeting -> <h1 className="text-2xl font-bold mb-6 text-center text-gray-800" key=greeting> (React.string greeting) </h1>)
     |> Array.of_list
     |> React.array
 end
@@ -10,6 +12,6 @@ let () =
   match ReactDOM.querySelector "#root" with
   | Some element ->
     let root = ReactDOM.Client.createRoot element in
-    ReactDOM.Client.render root <App />
+    ReactDOM.Client.render root <Home />
   | None ->
     Js.Console.error "Failed to start React: couldn't find the #root element"

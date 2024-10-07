@@ -7,14 +7,14 @@
     "init": "opam switch create . 5.1.1 -y --deps-only && npm run install-opam-npm",
     "install-opam-npm": "npm install && npm run install-opam && npm run check-npm-deps",
     "dune": "opam exec -- dune",
-    "build": "npm run dune -- build @react @node",
+    "build": "npm run dune -- build @react",
     "build-verbose": "npm run build -- --verbose",
     "clean": "npm run dune -- clean",
     "format": "npm run format-check -- --auto-promote",
     "format-check": "npm run dune -- build @fmt",
     "watch": "npm run build -- --watch",
-    "bundle": "webpack --mode production --entry ./_build/default/src/output/src/ReactApp.js",
-    "serve": "webpack serve --open --mode development --entry ./_build/default/src/output/src/ReactApp.js"
+    "bundle": "webpack --mode production --entry ./_build/default/src/output/src/App.js",
+    "serve": "webpack serve --open --mode development --entry ./_build/default/src/output/src/App.js"
   },
   "scriptsComments": {
     "preinstall-opam": "# Sync opam database with upstream repositories: https://opam.ocaml.org/doc/Usage.html#opam-update",
