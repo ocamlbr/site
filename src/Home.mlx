@@ -6,7 +6,7 @@ module Home = struct
           <div className="text-2xl font-bold">(React.string "OCaml BR")</div>
           <ul className="flex space-x-4">
             <li><a href="#" className="hover:text-orange-500">(React.string "Grupo no Telegram")</a></li>
-            <li><a href="#" className="hover:text-orange-500">(React.string "Associe-se")</a></li>
+            (* <li><a href="#" className="hover:text-orange-500">(React.string "Associe-se")</a></li> *)
           </ul>
         </nav>
       </header>
